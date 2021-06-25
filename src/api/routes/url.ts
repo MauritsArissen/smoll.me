@@ -9,6 +9,22 @@ const route = Router();
 export default (app: Router) => {
   app.use("/url", route);
 
+  /**
+   * @swagger
+   * /url/{code}:
+   *  get:
+   *    description: Request data from urlCode
+   *    tags: [Url]
+   *    parameters:
+   *      - in: path
+   *        name: code
+   *        schema:
+   *          type: string
+   *        required: true
+   *    responses:
+   *      '200':
+   *        description: A successful response
+   */
   route.get("/:code", async (req: Request, res: Response) => {
     try {
       const query: Partial<IUrlInputDTO> = { urlCode: req.params.code };

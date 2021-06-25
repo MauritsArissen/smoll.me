@@ -11,6 +11,27 @@ const route = Router();
 export default (app: Router) => {
   app.use("/shorten", route);
 
+  /**
+   * @swagger
+   * /shorten:
+   *  post:
+   *    description: Use to create a new shortened url
+   *    tags: [Shorten]
+   *    consumes:
+   *      - application/json
+   *    parameters:
+   *      - name: request
+   *        in: body
+   *        required: true
+   *        schema:
+   *          type: object
+   *          properties:
+   *            longUrl:
+   *              type: string
+   *    responses:
+   *      '201':
+   *        description: Successfully created a new url
+   */
   route.post(
     "/",
     celebrate({

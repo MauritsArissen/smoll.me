@@ -2,6 +2,7 @@ import Logger from "./logger";
 import mongooseLoader from "./mongoose";
 import expressLoader from "./express";
 import modelLoader from "./model";
+import swaggerLoader from "./swagger";
 import dependencyInjectorLoader from "./dependencyInjector";
 import welcomeLoader from "./welcome";
 
@@ -21,4 +22,7 @@ export default async ({ expressApp }) => {
 
   await expressLoader({ app: expressApp });
   Logger.info(`Express loaded`);
+
+  await swaggerLoader({ app: expressApp });
+  Logger.info(`Swagger loaded`);
 };
