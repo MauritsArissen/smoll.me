@@ -1,0 +1,38 @@
+{
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "celebrate": "^14.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.12.14",
+    "nanoid": "^3.1.23",
+    "reflect-metadata": "^0.1.13",
+    "typedi": "^0.10.0",
+    "valid-url": "^1.0.9",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "@types/nanoid": "^3.0.0",
+    "@types/valid-url": "^1.0.3",
+    "nodemon": "^2.0.7"
+  },
+  "name": "smoll.me",
+  "description": "This is the source code of smoll.me url shortener",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MauritsArissen/smoll.me.git"
+  },
+  "author": "Maurits Arissen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MauritsArissen/smoll.me/issues"
+  },
+  "homepage": "https://github.com/MauritsArissen/smoll.me#readme"
+}
