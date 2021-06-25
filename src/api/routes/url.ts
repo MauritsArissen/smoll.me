@@ -1,4 +1,4 @@
-import { Router, Request, Response, NextFunction } from "express";
+import { Router, Request, Response } from "express";
 import { Container } from "typedi";
 import { IUrlInputDTO } from "../../interfaces/IUrl";
 import UrlService from "../../services/url";

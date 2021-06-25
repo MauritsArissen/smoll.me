@@ -9,14 +9,14 @@ import util from "../../util";
 const route = Router();
 
 export default (app: Router) => {
-  app.use("/shorten", route);
+  app.use("/shortener", route);
 
   /**
    * @swagger
-   * /shorten:
+   * /shortener:
    *  post:
    *    description: Use to create a new shortened url
-   *    tags: [Shorten]
+   *    tags: [Shortener]
    *    consumes:
    *      - application/json
    *    parameters:

@@ -23,8 +23,8 @@ export default ({ app }: { app: express.Application }) => {
           description: "Handles /url path",
         },
         {
-          name: "Shorten",
-          description: "Handles /shorten path",
+          name: "Shortener",
+          description: "Handles /shortener path",
         },
       ],
     },

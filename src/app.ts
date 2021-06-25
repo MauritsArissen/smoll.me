@@ -2,7 +2,6 @@ import "reflect-metadata";
 import config from "./config";
 import express from "express";
 import Logger from "./loaders/logger";
-import { nanoid } from "nanoid";
 
 async function startServer() {
   const app = express();

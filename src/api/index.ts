@@ -1,10 +1,10 @@
 import { Router } from "express";
-import shorten from "./routes/shorten";
+import shortener from "./routes/shortener";
 import url from "./routes/url";
 
 export default () => {
   const app = Router();
-  shorten(app);
+  shortener(app);
   url(app);
   return app;
 };
