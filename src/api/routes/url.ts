@@ -7,11 +7,11 @@ import util from "../../util";
 const route = Router();
 
 export default (app: Router) => {
-  app.use("/url", route);
+  app.use("/", route);
 
   /**
    * @swagger
-   * /url/{code}:
+   * /{code}:
    *  get:
    *    description: Request data from urlCode
    *    tags: [Url]

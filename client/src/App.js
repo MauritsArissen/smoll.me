@@ -1,5 +1,3 @@
-import { Route, BrowserRouter as Router } from "react-router-dom";
-import Redirect from "./Redirect";
 import './App.css';
 
 function App() {
@@ -10,9 +8,6 @@ function App() {
 
   return (
     <div className="App">
-      <Router>
-        <Route exact path="/:code" component={Redirect} />
-      </Router>
       <header className="App-header">
         <p>
           Fill in a url to shorten
