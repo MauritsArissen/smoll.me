@@ -18,4 +18,8 @@ export default {
   logs: {
     level: process.env.LOG_LEVEL || "silly",
   },
+  api: {
+    version: "/v1",
+    prefix: "/api",
+  },
 };

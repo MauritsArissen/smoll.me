@@ -15,7 +15,7 @@ export default ({ app }: { app: express.Application }) => {
         servers: [`https://smoll.me`],
       },
       host: `smoll.me`,
-      basePath: "/",
+      basePath: config.api.version + config.api.prefix,
       schemes: ["https"],
       tags: [
         {

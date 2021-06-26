@@ -7,11 +7,11 @@ import util from "../../util";
 const route = Router();
 
 export default (app: Router) => {
-  app.use("/", route);
+  app.use("/url", route);
 
   /**
    * @swagger
-   * /{code}:
+   * /url/{code}:
    *  get:
    *    description: Request data from urlCode
    *    tags: [Url]
@@ -30,7 +30,7 @@ export default (app: Router) => {
       const query: Partial<IUrlInputDTO> = { urlCode: req.params.code };
       const urlServiceInstance = Container.get(UrlService);
       const { url } = await urlServiceInstance.GetUrlByUrlCode(query);
-      return res.redirect(url.longUrl);
+      return res.status(200).json({ url });
     } catch (e) {
       return util.handleCustomError(e, res);
     }
