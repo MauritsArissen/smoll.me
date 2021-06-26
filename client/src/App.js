@@ -1,20 +1,21 @@
 import './App.css';
 
 function App() {
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log("You clicked")
+  }
+
   return (
     <div className="App">
       <header className="App-header">
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Fill in a url to shorten
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <form onSubmit={handleSubmit}>
+          <input type="text"></input>
+          <button type="submit">Submit</button>
+        </form>
       </header>
     </div>
   );

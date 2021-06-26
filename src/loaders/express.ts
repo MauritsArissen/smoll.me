@@ -19,7 +19,7 @@ export default ({ app }: { app: express.Application }) => {
   app.use(require("method-override")());
 
   app.use(bodyParser.json());
-  app.use(config.api.version + config.api.prefix, routes());
+  app.use("/", routes());
 
   app.use((err, _req, res, next) => {
     if (err.name === "UnauthorizedError") {
