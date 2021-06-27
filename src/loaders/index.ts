@@ -21,11 +21,11 @@ export default async ({ expressApp }) => {
   });
   Logger.info("Dependency Injector loaded");
 
-  await expressLoader({ app: expressApp });
-  Logger.info("Express loaded");
-
   await swaggerLoader({ app: expressApp });
   Logger.info("Swagger loaded");
+
+  await expressLoader({ app: expressApp });
+  Logger.info("Express loaded");
 
   await clientLoader({ app: expressApp });
   Logger.info("Client loaded");
