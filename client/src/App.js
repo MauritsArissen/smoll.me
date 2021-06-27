@@ -4,13 +4,16 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCopy } from "@fortawesome/free-solid-svg-icons"
 
 function App() {
+
+  // Initiate states
   const [url, setUrl] = useState();
   const [showUrl, setShowUrl] = useState(false);
   const [error, setError] = useState();
   const [showError, setShowError] = useState(false);
   const [showInfo, setShowInfo] = useState(true);
 
-  function handleSubmit(e) {
+  // Handle functions
+  const handleSubmit = (e) => {
     e.preventDefault();
     if (e.target[0].value === "") return; 
     fetch("https://smoll.me/shortener", {
@@ -38,10 +41,11 @@ function App() {
       });
   }
 
-  function copyUrl() {
+  const copyUrl = () => {
     navigator.clipboard.writeText(url);
   }
 
+  // Render web component
   return (
     <div className="App">
       <header className="App-header">
