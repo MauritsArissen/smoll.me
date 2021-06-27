@@ -1,9 +1,21 @@
+import { useState } from 'react';
 import './App.css';
 
 function App() {
+  const [url, setUrl] = useState();
+
   function handleSubmit(e) {
     e.preventDefault();
-    console.log("You clicked")
+    fetch("https://smoll.me/shortener", {
+      method: "POST",
+      mode: 'cors',
+      headers: {
+        'Content-Type': "application/json"
+      },
+      body: JSON.stringify({ longUrl: e.target[0].value })
+    })
+      .then(response => response.json())
+      .then(data => setUrl("https://smoll.me/"+data.url.urlCode));
   }
 
   return (
@@ -16,6 +28,7 @@ function App() {
           <input type="text"></input>
           <button type="submit">Submit</button>
         </form>
+        <p>{url}</p>
       </header>
     </div>
   );
